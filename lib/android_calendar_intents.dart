@@ -7,11 +7,22 @@ class CalendarIntents {
  static void showAddEventScreen({
   String title,
   String description,
-  DateTime startTime,
+  DateTime beginTime,
   DateTime endTime,
   bool allDay,
 }){
-    // TODO
+   final intent = AndroidIntent(
+       action: "android.intent.action.INSERT",
+       data: 'content://com.android.calendar/events',
+       arguments: {
+         if(title!=null) 'title' : title,
+         if(description!=null) 'description' : description,
+         if(beginTime!=null) 'beginTime' : beginTime,
+         if(endTime!=null) 'endTime' : endTime,
+         if(allDay!=null) 'allDay' : allDay,
+       }
+   );
+   intent.launch();
   }
 
   static void showEventScreen(int eventId){
