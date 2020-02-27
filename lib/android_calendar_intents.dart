@@ -17,8 +17,8 @@ class CalendarIntents {
        arguments: {
          if(title!=null) 'title' : title,
          if(description!=null) 'description' : description,
-         if(beginTime!=null) 'beginTime' : beginTime,
-         if(endTime!=null) 'endTime' : endTime,
+         if(beginTime!=null) 'beginTime' : beginTime.millisecondsSinceEpoch,
+         if(endTime!=null) 'endTime' : endTime.millisecondsSinceEpoch,
          if(allDay!=null) 'allDay' : allDay,
        }
    );
