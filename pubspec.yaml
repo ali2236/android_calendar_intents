@@ -1,7 +1,7 @@
 name: android_calendar_intents
 description: A new Flutter package.
 version: 0.0.1
-homepage:
+homepage: https://github.com/ali2236/android_calendar_intents
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
