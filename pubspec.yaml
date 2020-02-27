@@ -1,0 +1,16 @@
+name: android_calendar_intents
+description: A new Flutter package.
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  android_intent: ^0.3.5+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
