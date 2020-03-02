@@ -25,7 +25,7 @@ class CalendarIntents {
    intent.launch();
   }
 
-  static void showEventScreen(int eventId){
+  static void showEventScreen(String eventId){
     final intent = AndroidIntent(
       action: "android.intent.action.VIEW",
       data: "content://com.android.calendar/events/$eventId",
