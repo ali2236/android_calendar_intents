@@ -4,13 +4,13 @@ import 'package:android_intent/android_intent.dart';
 
 class CalendarIntents {
 
- static void showAddEventScreen({
+ static Future<void> showAddEventScreen({
   String title,
   String description,
   DateTime beginTime,
   DateTime endTime,
   bool allDay,
-}){
+}) async{
    final intent = AndroidIntent(
        action: "android.intent.action.INSERT",
        data: 'content://com.android.calendar/events',
@@ -22,15 +22,15 @@ class CalendarIntents {
          if(allDay!=null) 'allDay' : allDay,
        }
    );
-   intent.launch();
+   return await intent.launch();
   }
 
-  static void showEventScreen(String eventId){
+  static Future<void> showEventScreen(String eventId) async{
     final intent = AndroidIntent(
       action: "android.intent.action.VIEW",
       data: "content://com.android.calendar/events/$eventId",
     );
-    intent.launch();
+    return await intent.launch();
   }
 
 }

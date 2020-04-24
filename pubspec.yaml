@@ -1,6 +1,6 @@
 name: android_calendar_intents
 description: A new Flutter package.
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/ali2236/android_calendar_intents
 
 environment:
@@ -9,7 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  android_intent: ^0.3.5+1
+  android_intent:
 
 dev_dependencies:
   flutter_test:
